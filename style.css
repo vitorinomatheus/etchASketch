@@ -1,4 +1,7 @@
+/*Pega fonte da internet*/
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+
+/*Passagem de cores do título*/
 @keyframes colorido {
     0% {color: red;}
     16.6% {color: orange;}
@@ -10,6 +13,7 @@
     100% {color:red;}
 }
 
+/*Ajusta corpo e define formato flex em coluna*/
 body {
     height: 100%;
     width: 100%;
@@ -29,40 +33,41 @@ body {
     animation-duration: 10s;
     animation-iteration-count: infinite;
     border-bottom: 1px solid white;
-    width: 100vw;
+    width: 100%;
 }
 
 .corpo {
     display: flex;
-    margin-top: 15px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin: 30px;
     color: white;
     font-family: 'Josefin sans', sans-serif;
-    font-size: 20px;
     justify-content: flex-start;
+    padding: 10px;
 }
 
-.grade {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-}
-
-.botoes {
+#menu {
     display: flex;
     flex-direction: column;
     padding: 10px;
     gap: 30px;
     text-align: center;
     align-items: center;
+    font-size: 20px;
 }
 
-.botoes p {
-    margin-bottom: 0px;
+#menu button {    
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    height: 50px;
+    width: 170px;
+    font-family: 'Josefin sans', sans-serif;
+    font-size: 15px;
+    text-align: center;
 }
 
-#cor {
+#menu #selCor {
     border-radius: 2px;
     border: 0 solid black;
     box-sizing: border-box;
@@ -73,16 +78,18 @@ body {
     width: 170px;
 }
 
-.botoes button {
-    
-    border-radius: 5px;
-    border: 2px solid white;
-    background-color: black;
-    color: white;
-    height: 50px;
-    width: 170px;
-    font-family: 'Josefin sans', sans-serif;
-    font-size: 15px;
-    text-align: center;
+.lousa {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
 
+.grade {
+    height: 550px;
+    width: 550px;
+    display: grid;
+}
+
+.pixel {
+    background-color: white;
 }
