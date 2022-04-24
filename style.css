@@ -23,7 +23,6 @@ body {
     margin: 0;
     padding-left: 30px;
     padding-right: 30px;
-    padding-bottom: 9px;
 }
 
 .cabecalho {
@@ -106,10 +105,15 @@ body {
 .rodape{
     color: white;
     font-family: 'Josefin sans', sans-serif;
-    text-align: end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .rodape p{
     margin: 9px;
     margin-bottom: 0px;
+    margin-top: 4.5px;
 }
