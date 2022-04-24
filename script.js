@@ -1,22 +1,24 @@
+const corInput = document.querySelector('#selCor');
+corInput.addEventListener('input', mudarCor);
+var tinta = 'black';
+
 function criarQuadro (tamanho) {
     let grade = document.querySelector('.grade');
     let quadra = grade.querySelectorAll('div');
     let total = tamanho * tamanho;
 
-    quadra.forEach((div) => div.remove());
+    quadra.forEach((div) => div.remove()); //Exclui conteúdo quando muda o tamanho dos quadros
     grade.style.gridTemplateColumns = `repeat(${tamanho}, 1fr)`;
     grade.style.gridTemplateRows = `repeat(${tamanho}, 1fr)`;
 
-    for (let i = 0; i < total; i++){
+    for (let i = 0; i < total; i++)
+    {
         const pixel = document.createElement('div');
-        const grade = document.querySelector('.grade');
-        const val = document.querySelector('input').value;
-        pixel.addEventListener('mouseover', () => {
-            pixel.style.backgroundColor = 'black';
-        });
-        //Adicionar classe
         pixel.classList.toggle('pixel');
-        
+        pixel.addEventListener('mouseover', () => {            
+            pixel.style.backgroundColor = tinta;
+        });
+  
         //Adicionar quadrados no div
         grade.insertAdjacentElement("beforeend", pixel); 
     }
@@ -57,6 +59,11 @@ function apagar() {
             pixel.style.backgroundColor = 'white';
         })
     })
+}
+
+function mudarCor(cor){
+    tinta = cor.target.value;
+    console.log(cor.target.value);
 }
 
 mudarTamanho();
