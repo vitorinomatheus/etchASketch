@@ -57,8 +57,9 @@ function apagar() {
     btn.addEventListener('click', () => {
         pixel.forEach((pixel) => {
             pixel.style.backgroundColor = 'white';
-        })
-    })
+            console.log('escutei');
+        });
+    });
 }
 
 function mudarCor(cor){
